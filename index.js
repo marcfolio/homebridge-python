@@ -5,7 +5,7 @@ var exec = require('child_process').exec;
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
-  homebridge.registerAccessory('homebridge-garagedoor-command', 'GarageCommand', GarageCmdAccessory);
+  homebridge.registerAccessory('homebridge-python', 'HomebridgePythonCommand', GarageCmdAccessory);
 };
 
 function GarageCmdAccessory(log, config) {

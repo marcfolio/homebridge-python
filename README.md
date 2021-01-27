@@ -1,7 +1,7 @@
-# homebridge-garagedoor-command
+# homebridge-python
 [![mit license](https://badgen.net/badge/license/MIT/red)](https://github.com/apexad/homebridge-mysmartblinds-bridge/blob/master/LICENSE)
-[![npm](https://badgen.net/npm/v/homebridge-garagedoor-command)](https://www.npmjs.com/package/homebridge-garagedoor-command)
-[![npm](https://badgen.net/npm/dt/homebridge-garagedoor-command)](https://www.npmjs.com/package/homebridge-garagedoor-command)
+[![npm](https://badgen.net/npm/v/homebridge-python)](https://www.npmjs.com/package/homebridge-python)
+[![npm](https://badgen.net/npm/dt/homebridge-python)](https://www.npmjs.com/package/homebridge-python)
 [![donate](https://badgen.net/badge/donate/paypal/91BE09)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JS2VTL89E6VZ4&source=url)
 
 [Homebridge](https://github.com/homebridge/homebridge) plugin to control a garage door using command line functions  
@@ -10,7 +10,7 @@ It supports commands to check `state`, `open`, and `close` the garage door
 ## Installation
 
 1. Install Homebridge using: `npm install -g homebridge`
-2. Install this plugin using: `npm install -g homebridge-garagedoor-command`
+2. Install this plugin using: `npm install -g homebridge-python`
 3. Update your configuration file. See the sample below.
 
 ## Configuration
@@ -20,7 +20,7 @@ Configuration sample:
 ```json
 "accessories": [
   {
-    "accessory": "GarageCommand",
+    "accessory": "HomebridgePythonCommand",
     "name": "Garage Door",
     "open": "./open.sh",
     "close": "./close.sh",
@@ -37,7 +37,7 @@ Configuration sample:
 
 Field                   | Description
 ------------------------|------------
-**accessory**           | Must always be "GarageCommand" (required)
+**accessory**           | Must always be "HomebridgePythonCommand" (required)
 **name**                | Name of the Garage Door (required)
 **open**                | open command. Examples: `./open.sh` or `node open.js` (required)
 **close**               | close command. Examples: `./close.sh` or `node close.js` (required)

@@ -1,5 +1,5 @@
 {
-  "name": "homebridge-garagedoor-command",
+  "name": "homebridge-python",
   "version": "0.4.1",
   "description": "Garage Door plugin for homebridge: https://github.com/nfarina/homebridge",
   "keywords": [
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/apexad/homebridge-garagedoor-command.git"
+    "url": "git://github.com/apexad/homebridge-python.git"
   },
   "funding": [
     {

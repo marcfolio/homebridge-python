@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "GarageCommand",
+  "pluginAlias": "HomebridgePythonCommand",
   "pluginType": "accessory",
   "singular": false,
   "schema": {
