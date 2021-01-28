@@ -43,11 +43,31 @@ PythonCmdAccessory.prototype.getServices = function() {
  */
 PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
   if(this.stateCommand){
-    console.log("stateCommand: " + this.stateCommand)
-    // this.garageDoorService.getCharacteristic(Characteristic.CurrentDoorState)
-    // .on('get', this.getState.bind(this));
-    // this.garageDoorService.getCharacteristic(Characteristic.TargetDoorState)
-    // .on('get', this.getState.bind(this));
+    console.log("stateCommand: ")
+
+    var accessory = this;
+    var command = accessory.stateCommand;
+
+    exec(command, function (err, stdout, stderr) {
+      if (err) {
+        accessory.log('Error: ' + err);
+        callback(err || new Error('Error getting state of ' + accessory.name));
+      } else {
+        var state = stdout.toString('utf-8').trim();
+        if (state === 'STOPPED' && accessory.ignoreErrors) {
+          state = 'CLOSED';
+        }
+        if (accessory.logPolling) {
+          accessory.log('State of ' + accessory.name + ' is: ' + state);
+        }
+
+        //callback(null, Characteristic.CurrentDoorState[state]);
+      }
+
+      if (accessory.pollStateDelay > 0) {
+        accessory.pollState();
+      }
+    });
   }
   console.log('Triggered GET On:'+ value);
 
