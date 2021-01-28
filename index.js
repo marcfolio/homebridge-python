@@ -44,10 +44,9 @@ PythonCmdAccessory.prototype.getServices = function() {
 PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
   
   console.log('Triggered GET On');
-  // set this to a valid value for On
-  const currentValue = 0;
-
-  //callback(null, currentValue);
+  // set this to a valid value for On 1 = "on" 0 = "off"
+  const currentValue = 1;
+  callback(null, currentValue);
 }
 
 /**
@@ -55,6 +54,5 @@ PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
  */
 PythonCmdAccessory.prototype.handleOnSet = function(value, callback){
   console.log('Triggered SET On:' + value);
-
-  //callback(null);
+  callback(null);
 }
