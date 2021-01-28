@@ -73,7 +73,7 @@ PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
   // set this to a valid value for On
   const currentValue = 0;
 
-  callback(null, currentValue);
+  //callback(null, currentValue);
 }
 
 /**
