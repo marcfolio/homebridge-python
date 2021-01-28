@@ -43,16 +43,38 @@ PythonCmdAccessory.prototype.getServices = function() {
 /**
  * Handle requests to get the current value of the "On" characteristic
  */
-PythonCmdAccessory.prototype.handleOnGet = function (){
-  
-  if (this.stateCommand) {
-    console.log('stateCommand');
-  }
+PythonCmdAccessory.prototype.handleOnGet = function (callback){
 
-  // set this to a valid value for On
-  const currentValue = 0;
-  //callback(null, currentValue);
+  var accessory = this;
+  var command = accessory.stateCommand;
+
+  exec(command, function (err, stdout, stderr) {
+    if (err) {
+      accessory.log('Error: ' + err);
+      callback(err || new Error('Error getting state of ' + accessory.name));
+    } else {
+      var state = stdout.toString('utf-8').trim();
+      if (state === 'STOPPED' && accessory.ignoreErrors) {
+        state = 'CLOSED';
+      }
+      // set this to a valid value for On
+      const currentValue = 0;
+      callback(null, currentValue);
+    }
+  });
+  
+  // if (this.stateCommand) {
+  //   console.log('stateCommand');
+  // }
+
+  
 }
+
+
+
+
+
+
 
 /**
  * Handle requests to set the "On" characteristic
