@@ -45,14 +45,14 @@ PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
   var accessory = this;
   var command = accessory.stateCommand;
   var state;
-  
-  exec(command, function (err, stdout, stderr) {
+
+  // exec(command, function (err, stdout, stderr) {
     
-    if(this.stateCommand){
-      state = stdout.toString('utf-8').trim();
-    }
-  }
-  console.log('Triggered GET On:'+ value + " : "+ state);
+  //   if(this.stateCommand){
+  //     state = stdout.toString('utf-8').trim();
+  //   }
+  // }
+  //console.log('Triggered GET On:'+ value + " : "+ state);
   // set this to a valid value for On
   const currentValue = 0;
 
