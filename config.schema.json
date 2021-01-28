@@ -12,12 +12,17 @@
         "required": true
       },
       "on": {
-        "title": "Command to open door",
+        "title": "Command to turn on",
         "type": "string",
         "required": true
       },
       "off": {
-        "title": "Command to close door",
+        "title": "Command to turn off",
+        "type": "string",
+        "required": true
+      },
+      "state": {
+        "title": "Command check state",
         "type": "string",
         "required": true
       }

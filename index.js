@@ -16,6 +16,7 @@ function PythonCmdAccessory(log, config) {
   this.name = config.name;
   this.onCommand = config.on;
   this.offCommand = config.off;
+  this.stateCommand = config.state;
 }
 
 PythonCmdAccessory.prototype.getServices = function() {
@@ -41,6 +42,13 @@ PythonCmdAccessory.prototype.getServices = function() {
  * Handle requests to get the current value of the "On" characteristic
  */
 PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
+  if(this.stateCommand){
+    console.log("stateCommand: " + this.stateCommand)
+    // this.garageDoorService.getCharacteristic(Characteristic.CurrentDoorState)
+    // .on('get', this.getState.bind(this));
+    // this.garageDoorService.getCharacteristic(Characteristic.TargetDoorState)
+    // .on('get', this.getState.bind(this));
+  }
   console.log('Triggered GET On:'+ value);
 
   // set this to a valid value for On
