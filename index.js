@@ -47,6 +47,7 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
 
   var accessory = this;
   var command = accessory.stateCommand;
+  const currentValue;
 
   exec(command, function (err, stdout, stderr) {
     if (err) {
@@ -54,11 +55,11 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
       callback(err || new Error('Error getting state of ' + accessory.name));
     } else {
       var state = stdout.toString('utf-8').trim();
-      if (state === 'STOPPED' && accessory.ignoreErrors) {
-        state = 'CLOSED';
+      if (state === 'ON') {
+        currentValue = 1;
       }
       // set this to a valid value for On
-      const currentValue = 0;
+      
       callback(null, currentValue);
     }
   });
