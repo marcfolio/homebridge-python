@@ -2,6 +2,7 @@ var Service;
 var Characteristic;
 var exec = require('child_process').exec;
 var light;
+var foo = 'OFF';
 
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
@@ -46,7 +47,7 @@ PythonCmdAccessory.prototype.getServices = function() {
 PythonCmdAccessory.prototype.handleOnGet = function (callback){
 
   var accessory = this;
-  var command = accessory.stateCommand;
+  var command = accessory.stateCommand + foo;
   var currentValue;
 
   exec(command, function (err, stdout, stderr) {
