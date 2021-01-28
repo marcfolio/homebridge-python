@@ -47,7 +47,7 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
 
   var accessory = this;
   var command = accessory.stateCommand;
-  const currentValue;
+  var currentValue;
 
   exec(command, function (err, stdout, stderr) {
     if (err) {
@@ -56,8 +56,9 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
     } else {
       var state = stdout.toString('utf-8').trim();
       if (state === 'ON' && accessory.ignoreErrors) {
-        state = 'ON';
-        currentValue =1;
+        currentValue = 1;
+      }else{
+        currentValue = 0;
       }
       // set this to a valid value for On
       
