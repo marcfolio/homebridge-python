@@ -31,8 +31,6 @@ function PythonCmdAccessory(log, config) {
     .on('get', this.handleOnGet.bind(this))
     .on('set', this.handleOnSet.bind(this));
 
-this.garageDoorService.getCharacteristic(Characteristic.CurrentDoorState)
-    .on('get', this.getState.bind(this));
 }
 
 /**
