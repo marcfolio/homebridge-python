@@ -4,6 +4,8 @@ var exec = require('child_process').exec;
 var light;
 var foo = 'ON';
 
+var PythonShell = require('python-shell');
+
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
@@ -18,6 +20,8 @@ function PythonCmdAccessory(log, config) {
   this.onCommand = config.on;
   this.offCommand = config.off;
   this.stateCommand = config.state;
+  this.relayGpio = config.relayGpio;
+  this.stateGpio = config.stateGpio;
 
 }
 
@@ -47,8 +51,21 @@ PythonCmdAccessory.prototype.getServices = function() {
 PythonCmdAccessory.prototype.handleOnGet = function (callback){
 
   var accessory = this;
-  var command = accessory.stateCommand+' "'+foo+'"';
+  var command = accessory.stateCommand+' "'+accessory.stateGpio+'"';
   var currentValue;
+
+
+  var options = {
+    args: ['value1', 'value2', 'value3']
+  };
+
+  PythonShell.run(command, options, function (err, results) {
+    if (err) 
+      throw err;
+      // Results is an array consisting of messages collected during execution
+      console.log('results: %j', results);
+  });
+
 
   exec(command, function (err, stdout, stderr) {
     if (err) {

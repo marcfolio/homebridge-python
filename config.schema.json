@@ -11,6 +11,16 @@
         "default": "Room Light",
         "required": true
       },
+      "relayGpio": {
+        "title": "RASPI GPIO #",
+        "type": "string",
+        "required": true
+      },
+      "stateGpio": {
+        "title": "RASPI GPIO #",
+        "type": "string",
+        "required": true
+      },
       "on": {
         "title": "Command to turn on",
         "type": "string",
