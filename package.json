@@ -1,31 +1,30 @@
 {
   "name": "homebridge-python",
-  "version": "0.4.1",
-  "description": "Garage Door plugin for homebridge: https://github.com/nfarina/homebridge",
+  "version": "0.1.1",
+  "description": "Python Script",
   "keywords": [
     "homebridge-plugin",
-    "garage",
-    "garage-door"
+    "light"
   ],
   "engines": {
     "node": ">=0.12.0",
     "homebridge": ">=0.2.0"
   },
   "author": {
-    "name": "Alex 'apexad' Martin"
+    "name": "Marcfolio"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/apexad/homebridge-python.git"
+    "url": "git://github.com/marcfolio/homebridge-python"
   },
   "funding": [
     {
       "type": "paypal",
-      "url": "https://www.paypal.me/apexadm"
+      "url": ""
     },
     {
       "type": "github",
-      "url": "https://github.com/sponsors/apexad"
+      "url": "https://github.com/sponsors/marcfolio"
     }
   ],
   "license": "MIT",
