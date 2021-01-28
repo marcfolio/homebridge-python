@@ -40,8 +40,8 @@ PythonCmdAccessory.prototype.getServices = function() {
 /**
  * Handle requests to get the current value of the "On" characteristic
  */
-PythonCmdAccessory.prototype.handleOnGet = function (callback){
-  console.log('Triggered GET On');
+PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
+  console.log('Triggered GET On:'+ value);
 
   // set this to a valid value for On
   const currentValue = 0;
