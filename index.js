@@ -40,7 +40,7 @@ PythonCmdAccessory.prototype.getServices = function() {
 /**
  * Handle requests to get the current value of the "On" characteristic
  */
-function handleOnGet(callback){
+PythonCmdAccessory.prototype.handleOnGet = function (callback){
   this.log.debug('Triggered GET On');
 
   // set this to a valid value for On
@@ -52,7 +52,7 @@ function handleOnGet(callback){
 /**
  * Handle requests to set the "On" characteristic
  */
-function handleOnSet(value, callback){
+PythonCmdAccessory.prototype.handleOnSet = function(value, callback){
   this.log.debug('Triggered SET On:' + value);
 
   callback(null);
