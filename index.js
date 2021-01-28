@@ -4,10 +4,6 @@ var exec = require('child_process').exec;
 var light;
 var foo = 'OFF';
 
-var PythonShell = require('python-shell');
-
-
-
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
@@ -51,19 +47,8 @@ PythonCmdAccessory.prototype.getServices = function() {
 PythonCmdAccessory.prototype.handleOnGet = function (callback){
 
   var accessory = this;
-  var command = "'"+accessory.stateCommand+" '"+ foo;
+  var command = "'"+accessory.stateCommand+" ' '"+ foo+"'";
   var currentValue;
-
-  var options = {
-      scriptPath: 'python/scripts',
-      args: [foo],
-  };
-
-  PythonShell.run(command, options, function (err, results) {
-    if (err) throw err;
-    console.log('results: %j', results);
-  });
-
 
   exec(command, function (err, stdout, stderr) {
     if (err) {
