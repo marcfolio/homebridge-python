@@ -26,9 +26,11 @@ function PythonCmdAccessory(log, config) {
   this.service = new Service.Switch(this.name);
 
   // create handlers for required characteristics
-  this.service.getCharacteristic(this.Characteristic.On)
+
+  this.service.getCharacteristic(Characteristic.On)
     .on('get', this.handleOnGet.bind(this))
     .on('set', this.handleOnSet.bind(this));
+
 }
 
 /**
