@@ -43,7 +43,7 @@ PythonCmdAccessory.prototype.getServices = function() {
 /**
  * Handle requests to get the current value of the "On" characteristic
  */
-PythonCmdAccessory.prototype.handleOnGet = function (callback){
+PythonCmdAccessory.prototype.handleOnGet = function (){
   
   if (this.stateCommand) {
     console.log('stateCommand');
@@ -51,7 +51,7 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
 
   // set this to a valid value for On
   const currentValue = 0;
-  callback(null, currentValue);
+  //callback(null, currentValue);
 }
 
 /**
