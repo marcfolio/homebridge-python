@@ -14,8 +14,8 @@ function PythonCmdAccessory(log, config) {
   this.config = config;
   //this.api = api;
 
-  this.Service = this.api.hap.Service;
-  this.Characteristic = this.api.hap.Characteristic;
+  //this.Service = this.api.hap.Service;
+  //this.Characteristic = this.api.hap.Characteristic;
 
   // extract name from config
   this.name = config.name;
