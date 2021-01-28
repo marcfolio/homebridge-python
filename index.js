@@ -61,7 +61,7 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
         currentValue = 0;
       }
       // set this to a valid value for On
-      
+      console.log("LIGHT IS "+ state)
       callback(null, currentValue);
     }
   });
