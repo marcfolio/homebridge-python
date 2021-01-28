@@ -55,8 +55,9 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
       callback(err || new Error('Error getting state of ' + accessory.name));
     } else {
       var state = stdout.toString('utf-8').trim();
-      if (state === 'ON') {
-        currentValue = 1;
+      if (state === 'ON' && accessory.ignoreErrors) {
+        state = 'ON';
+        currentValue =1;
       }
       // set this to a valid value for On
       
