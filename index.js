@@ -42,9 +42,14 @@ PythonCmdAccessory.prototype.getServices = function() {
  * Handle requests to get the current value of the "On" characteristic
  */
 PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
-  var state;
-  if(this.stateCommand){
-    state = stdout.toString('utf-8').trim();
+  var accessory = this;
+  var command = accessory.stateCommand;
+
+  exec(command, function (err, stdout, stderr) {
+    var state;
+    if(this.stateCommand){
+      state = stdout.toString('utf-8').trim();
+    }
   }
   console.log('Triggered GET On:'+ value + " : "+ state);
   // set this to a valid value for On
