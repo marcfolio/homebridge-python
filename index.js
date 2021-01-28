@@ -2,7 +2,7 @@ var Service;
 var Characteristic;
 var exec = require('child_process').exec;
 var light;
-var foo = 'OFF';
+var foo = 'ON';
 
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
