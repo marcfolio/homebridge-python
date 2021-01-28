@@ -1,6 +1,7 @@
 var Service;
 var Characteristic;
 var exec = require('child_process').exec;
+var light;
 
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
@@ -27,9 +28,11 @@ PythonCmdAccessory.prototype.getServices = function() {
   .setCharacteristic(Characteristic.Model, 'Homebridge Plugin')
   .setCharacteristic(Characteristic.SerialNumber, '002');
 
-  this.service.getCharacteristic(Characteristic.On)
-    .on('get', this.handleOnGet.bind(this))
-    .on('set', this.handleOnSet.bind(this));
+  
+  light = this.service.getCharacteristic(Characteristic.On)
+
+  light.on('get', this.handleOnGet.bind(this))
+  light.on('set', this.handleOnSet.bind(this));
 
   return [this.informationService, this.service];
 };
