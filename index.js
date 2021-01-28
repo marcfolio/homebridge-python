@@ -44,7 +44,6 @@ PythonCmdAccessory.prototype.getServices = function() {
 PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
   if(this.stateCommand){
     console.log("stateCommand: ")
-
     var accessory = this;
     var command = accessory.stateCommand;
 
@@ -69,7 +68,7 @@ PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
       }
     });
   }
-  console.log('Triggered GET On:'+ value);
+  console.log('Triggered GET On:');
 
   // set this to a valid value for On
   const currentValue = 0;
