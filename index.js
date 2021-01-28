@@ -55,8 +55,7 @@ PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
   //console.log('Triggered GET On:'+ value + " : "+ state);
   // set this to a valid value for On
   const currentValue = 0;
-
-  callback(null, currentValue);
+  //callback(null, currentValue);
 }
 
 /**
