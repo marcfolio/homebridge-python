@@ -16,7 +16,6 @@ function PythonCmdAccessory(log, config) {
   this.name = config.name;
   this.onCommand = config.on;
   this.offCommand = config.off;
-  this.stateCommand = config.state;
 }
 
 PythonCmdAccessory.prototype.getServices = function() {
@@ -38,14 +37,16 @@ PythonCmdAccessory.prototype.getServices = function() {
   return [this.informationService, this.service];
 };
 
+
 /**
  * Handle requests to get the current value of the "On" characteristic
  */
-PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
-  
+PythonCmdAccessory.prototype.handleOnGet = function (callback){
   console.log('Triggered GET On');
-  // set this to a valid value for On 1 = "on" 0 = "off"
-  const currentValue = 1;
+
+  // set this to a valid value for On
+  const currentValue = 0;
+
   callback(null, currentValue);
 }
 
@@ -54,5 +55,6 @@ PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
  */
 PythonCmdAccessory.prototype.handleOnSet = function(value, callback){
   console.log('Triggered SET On:' + value);
+
   callback(null);
 }
