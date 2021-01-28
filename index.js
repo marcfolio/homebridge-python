@@ -5,7 +5,7 @@ var exec = require('child_process').exec;
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
-  homebridge.registerAccessory('homebridge-python', 'HomebridgePythonCommand', PythonCmdAccessory);
+  homebridge.registerAccessory('HomebridgePythonCommand', PythonCmdAccessory);
 };
 
 function PythonCmdAccessory(log, config) {
@@ -60,7 +60,7 @@ handleOnSet(value, callback) {
 
   callback(null);
 }
-  
+
 
 PythonCmdAccessory.prototype.setState = function(isClosed, callback, context) {
 
