@@ -5,7 +5,7 @@ var exec = require('child_process').exec;
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
-  homebridge.registerAccessory('HomebridgePythonCommand', PythonCmdAccessory);
+  homebridge.registerAccessory('homebridge-python', 'HomebridgePythonCommand', PythonCmdAccessory);
 };
 
 function PythonCmdAccessory(log, config) {
@@ -31,6 +31,8 @@ function PythonCmdAccessory(log, config) {
     .on('get', this.handleOnGet.bind(this))
     .on('set', this.handleOnSet.bind(this));
 
+this.garageDoorService.getCharacteristic(Characteristic.CurrentDoorState)
+    .on('get', this.getState.bind(this));
 }
 
 /**
