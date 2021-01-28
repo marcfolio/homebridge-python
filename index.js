@@ -23,7 +23,7 @@ function PythonCmdAccessory(log, config) {
   this.offCommand = config.off;
 
   // create a new Switch service
-  this.service = new this.Service(this.Service.Switch);
+  this.service = new Service.Switch(this.name);
 
   // create handlers for required characteristics
   this.service.getCharacteristic(this.Characteristic.On)
