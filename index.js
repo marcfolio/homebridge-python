@@ -42,20 +42,12 @@ PythonCmdAccessory.prototype.getServices = function() {
  * Handle requests to get the current value of the "On" characteristic
  */
 PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
-  var accessory = this;
-  var command = accessory.stateCommand;
-  var state;
-
-  // exec(command, function (err, stdout, stderr) {
-    
-  //   if(this.stateCommand){
-  //     state = stdout.toString('utf-8').trim();
-  //   }
-  // }
-  //console.log('Triggered GET On:'+ value + " : "+ state);
+  
+  console.log('Triggered GET On:'+ value);
   // set this to a valid value for On
   const currentValue = 0;
-  //callback(null, currentValue);
+
+  callback(null, currentValue);
 }
 
 /**
@@ -64,5 +56,5 @@ PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
 PythonCmdAccessory.prototype.handleOnSet = function(value, callback){
   console.log('Triggered SET On:' + value);
 
-  callback(null);
+  //callback(null);
 }
