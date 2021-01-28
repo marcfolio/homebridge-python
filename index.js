@@ -44,9 +44,10 @@ PythonCmdAccessory.prototype.getServices = function() {
 PythonCmdAccessory.prototype.handleOnGet = function (value, callback){
   var accessory = this;
   var command = accessory.stateCommand;
-
+  var state;
+  
   exec(command, function (err, stdout, stderr) {
-    var state;
+    
     if(this.stateCommand){
       state = stdout.toString('utf-8').trim();
     }
