@@ -12,26 +12,27 @@ function PythonCmdAccessory(log, config) {
   
   this.log = log;
   this.config = config;
-  //this.api = api;
-
-  //this.Service = this.api.hap.Service;
-  //this.Characteristic = this.api.hap.Characteristic;
-
-  // extract name from config
   this.name = config.name;
   this.onCommand = config.on;
   this.offCommand = config.off;
+}
 
-  // create a new Switch service
+PythonCmdAccessory.prototype.getServices = function() {
+  
+  this.informationService = new Service.AccessoryInformation();
   this.service = new Service.Switch(this.name);
 
-  // create handlers for required characteristics
+  this.informationService
+  .setCharacteristic(Characteristic.Manufacturer, 'Homebridge Python')
+  .setCharacteristic(Characteristic.Model, 'Homebridge Plugin')
+  .setCharacteristic(Characteristic.SerialNumber, '002');
 
   this.service.getCharacteristic(Characteristic.On)
     .on('get', this.handleOnGet.bind(this))
     .on('set', this.handleOnSet.bind(this));
 
-}
+  return [this.informationService, this.service];
+};
 
 /**
  * Handle requests to get the current value of the "On" characteristic
