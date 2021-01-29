@@ -104,11 +104,10 @@ PythonCmdAccessory.prototype.handleOnSet = function(value, callback){
         currentValue = 0;
       }
       // set this to a valid value for On
-      console.log("LIGHT IS "+ state)
-      callback(null, currentValue);
+      console.log('Triggered SET On:' + value);
+      callback(null);
     }
   });
 
-  console.log('Triggered SET On:' + value);
-  callback(null);
+  
 }
