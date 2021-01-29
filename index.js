@@ -88,6 +88,27 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
  * Handle requests to set the "On" characteristic
  */
 PythonCmdAccessory.prototype.handleOnSet = function(value, callback){
+  var accessory = this;
+  var command = accessory.onCommand+' "'+accessory.relayGpio+'"';
+  var currentValue;
+
+  exec(command, function (err, stdout, stderr) {
+    if (err) {
+      accessory.log('Error: ' + err);
+      callback(err || new Error('Error getting state of ' + accessory.name));
+    } else {
+      var state = stdout.toString('utf-8').trim();
+      if (state === 'ON') {
+        currentValue = 1;
+      }else{
+        currentValue = 0;
+      }
+      // set this to a valid value for On
+      console.log("LIGHT IS "+ state)
+      callback(null, currentValue);
+    }
+  });
+
   console.log('Triggered SET On:' + value);
   callback(null);
 }
