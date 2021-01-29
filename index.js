@@ -54,6 +54,19 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
   var command = accessory.stateCommand+' "'+accessory.stateGpio+'"';
   var currentValue;
 
+  var options = {
+    mode: 'text',
+    args: ['value1']
+  };
+  var pys = "/var/lib/homebridge/scripts/light_state.py"
+  PythonShell.run(pys, options, function (err, results) {
+    if (err) 
+      throw err;
+    // Results is an array consisting of messages collected during execution
+    console.log('results: %j', results);
+  });
+
+
   exec(command, function (err, stdout, stderr) {
     if (err) {
       accessory.log('Error: ' + err);
