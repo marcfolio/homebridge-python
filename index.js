@@ -54,19 +54,6 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
   var command = accessory.stateCommand+' "'+accessory.stateGpio+'"';
   var currentValue;
 
-
-  var options = {
-    args: ['value1', 'value2', 'value3']
-  };
-
-  PythonShell.run(command, options, function (err, results) {
-    if (err) 
-      throw err;
-      // Results is an array consisting of messages collected during execution
-      console.log('results: %j', results);
-  });
-
-
   exec(command, function (err, stdout, stderr) {
     if (err) {
       accessory.log('Error: ' + err);
