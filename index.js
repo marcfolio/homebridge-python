@@ -2,9 +2,6 @@ var Service;
 var Characteristic;
 var exec = require('child_process').exec;
 var light;
-var foo = 'ON';
-
-var PythonShell = require('python-shell');
 
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
@@ -53,19 +50,6 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
   var accessory = this;
   var command = accessory.stateCommand+' "'+accessory.stateGpio+'"';
   var currentValue;
-
-  var options = {
-    mode: 'text',
-    args: ['value1']
-  };
-  var pys = "/var/lib/homebridge/scripts/light_state.py"
-  PythonShell.run(pys, options, function (err, results) {
-    if (err) 
-      throw err;
-    // Results is an array consisting of messages collected during execution
-    console.log('results: %j', results);
-  });
-
 
   exec(command, function (err, stdout, stderr) {
     if (err) {
