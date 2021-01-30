@@ -79,11 +79,6 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
 }
 
 
-
-
-
-
-
 /**
  * Handle requests to set the "On" characteristic
  */
