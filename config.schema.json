@@ -21,13 +21,8 @@
         "type": "string",
         "required": true
       },
-      "on": {
+      "toggle": {
         "title": "Command to turn on",
-        "type": "string",
-        "required": true
-      },
-      "off": {
-        "title": "Command to turn off",
         "type": "string",
         "required": true
       },

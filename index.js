@@ -14,8 +14,7 @@ function PythonCmdAccessory(log, config) {
   this.log = log;
   this.config = config;
   this.name = config.name;
-  this.onCommand = config.on;
-  this.offCommand = config.off;
+  this.toggleCommand = config.toggle;
   this.stateCommand = config.state;
   this.relayGpio = config.relayGpio;
   this.stateGpio = config.stateGpio;
@@ -84,7 +83,7 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
  */
 PythonCmdAccessory.prototype.handleOnSet = function(value, callback){
   var accessory = this;
-  var command = accessory.onCommand+' "'+accessory.relayGpio+' "'+'"'+value+'"';
+  var command = accessory.toggleCommand+' "'+accessory.relayGpio+' "'+'"'+value+'"';
   var currentValue;
 
   exec(command, function (err, stdout, stderr) {
