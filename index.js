@@ -84,7 +84,7 @@ PythonCmdAccessory.prototype.handleOnGet = function (callback){
  */
 PythonCmdAccessory.prototype.handleOnSet = function(value, callback){
   var accessory = this;
-  var command = accessory.onCommand+' "'+accessory.relayGpio+'"'+'"'+value+'"';
+  var command = accessory.onCommand+' "'+accessory.relayGpio+' "'+'"'+value+'"';
   var currentValue;
 
   exec(command, function (err, stdout, stderr) {
