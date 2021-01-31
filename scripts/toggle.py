@@ -21,6 +21,3 @@ else:
 
 new_file.close()
 
-
-
-
