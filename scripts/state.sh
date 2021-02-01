@@ -1,1 +1,1 @@
-python /var/lib/homebridge/scripts/light_state.py $1
+python /var/lib/homebridge/scripts/state.py $1
