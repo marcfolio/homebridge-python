@@ -31,9 +31,9 @@ while True:
     # Read all the ADC channel values in a list.
     values = a0.value-20848
     if values>0:
-    	print("Device is On", max(values))
+    	print("Device is On", values)
     else:
-        print("Device is OFF", max(values))
+        print("Device is OFF", values)
 
     # print("a0 = ", a0.value, a0.voltage)
     time.sleep(0.5)
