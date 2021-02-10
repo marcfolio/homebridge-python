@@ -19,22 +19,41 @@ a1 = AnalogIn(ads, ADS.P1)
 # Create differential input between channel 0 and 1
 # chan = AnalogIn(ads, ADS.P0, ADS.P1)
 
-print("{:>5}\t{:>5}".format("raw", "v"))
+# print("{:>5}\t{:>5}".format("raw", "v"))
 
-
-
+        
 while True:
     # print("{:>5}\t{:>5.3f}".format(chan.value, chan.voltage))
     # print("a1 = ", a1.value, a1.voltage)
+
+    # GAIN = 1
+    # state=False
+
+    # # Read all the ADC channel values in a list.
+    # values = [0]*50
+    # for i in range(50):
+    #     #values[i] = adc.read_adc(0, gain=GAIN)
+    #     values[i] = a0-2000
+    
+    # if max(values)>0:
+    #     print("Device is True")
+    #     print(max(values))
+    #     state=True
+    # else:
+    #     print("Device is False")
+    #     print(max(values))
+    #     state=False
+
+    # return state
  
 
-    # Read all the ADC channel values in a list.
-    values = a0.voltage
-    if values<2.6:
-    	print("Device is On", values)
-    else:
-        print("Device is OFF", values)
+    # # Read all the ADC channel values in a list.
+    # values = a0.voltage
+    # if values<2.6:
+    # 	print("Device is On", values)
+    # else:
+    #     print("Device is OFF", values)
 
-    # print("a0 = ", a0.value, a0.voltage)
+    print("a0 = ", a0.value, a0.voltage)
     # print("a0 = ", a0.value, a0.voltage)
     time.sleep(0.5)
