@@ -44,7 +44,7 @@ while True:
         print(max(values))
         state=False
 
-    return state
+    # return state
  
 
     # # Read all the ADC channel values in a list.
