@@ -23,6 +23,6 @@ print("{:>5}\t{:>5}".format("raw", "v"))
 
 while True:
     # print("{:>5}\t{:>5.3f}".format(chan.value, chan.voltage))
-    print("a1 = ", a1.value, a1.voltage)
+    # print("a1 = ", a1.value, a1.voltage)
     print("a0 = ", a0.value, a0.voltage)
     time.sleep(0.5)
