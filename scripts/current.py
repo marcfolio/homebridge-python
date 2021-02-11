@@ -22,32 +22,44 @@ a1 = AnalogIn(ads, ADS.P1)
 # print("{:>5}\t{:>5}".format("raw", "v"))
 
         
-while True:
-    # print("{:>5}\t{:>5.3f}".format(chan.value, chan.voltage))
-    # print("a1 = ", a1.value, a1.voltage)
+# while True:
+#     # print("{:>5}\t{:>5.3f}".format(chan.value, chan.voltage))
+#     # print("a1 = ", a1.value, a1.voltage)
 
    
-    values = a0.value - 20848
+#     values = a0.value - 20848
     
-    if max(values)>0:
-        print("Device is True")
-        print(max(values))
-        state=True
-    else:
-        print("Device is False")
-        print(max(values))
-        state=False
+#     if max(values)>0:
+#         print("Device is True")
+#         print(max(values))
+#         state=True
+#     else:
+#         print("Device is False")
+#         print(max(values))
+#         state=False
 
-    # return state
+#     # return state
  
 
-    # # Read all the ADC channel values in a list.
-    # values = a0.value - 20848
-    # if values<0:
-    # 	print("Device is On", values)
-    # else:
-    #     print("Device is OFF", values)
+#     # # Read all the ADC channel values in a list.
+#     # values = a0.value - 20848
+#     # if values<0:
+#     # 	print("Device is On", values)
+#     # else:
+#     #     print("Device is OFF", values)
 
-    # print("a0 = ", a0.value, a0.voltage)
-    # print("a0 = ", a0.value, a0.voltage)
-    time.sleep(1)
+#     # print("a0 = ", a0.value, a0.voltage)
+#     # print("a0 = ", a0.value, a0.voltage)
+#     time.sleep(1)
+
+
+
+values = [0]*100
+while True:
+    for i in range(100):
+        #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
+        values[i] = a0
+                    
+    print("OFF")
+    #print(math.ceil(sum(values) / len(values)))
+    print(max(values))  
