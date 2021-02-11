@@ -62,7 +62,7 @@ while True:
         #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
         values[i] = a0.value - maxnum
 
-    if max(values)>0:
+    if max(values)>=0:
     	print("Divice is true")
     	print(max(values))
     else:
