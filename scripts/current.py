@@ -60,16 +60,18 @@ values = [0]*50
 while True:
     for i in range(50):
         #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
-        values[i] = a0.value - maxnum
+        values[i] = a0.voltage 
 
-    if max(values)>0:
-    	print("Divice is true")
-    	print(max(values))
-    else:
-    	print("Divice is false")
-    	print(max(values))
+    print(max(values))
 
-    print("a1 = ", a1.value, a1.voltage)
+    # if max(values)>0:
+    # 	print("Divice is true")
+    # 	print(max(values))
+    # else:
+    # 	print("Divice is false")
+    # 	print(max(values))
+
+    # print("a1 = ", a1.value, a1.voltage)
                     
     # print("OFF")
     # #print(math.ceil(sum(values) / len(values)))
