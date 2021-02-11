@@ -60,20 +60,20 @@ maxnum = 20864
 
 values = [0]*100
 while True:
-    for i in range(50):
-    #values[i] = adc.read_adc(0, gain=GAIN)
-    values[i] = a0.value-maxnum
+	for i in range(50):
+	#values[i] = adc.read_adc(0, gain=GAIN)
+	values[i] = a0.value-maxnum
 
-    if max(values)>0:
-    	print("Device is True")
-    	print(max(values))
-    	state=True
-    else:
-    	print("Device is False")
-    	print(max(values))
-    	state=False
+	if max(values)>0:
+		print("Device is True")
+		print(max(values))
+		state=True
+	else:
+		print("Device is False")
+		print(max(values))
+		state=False
 
-    return state
+	return state
 
 
     # for i in range(100):
