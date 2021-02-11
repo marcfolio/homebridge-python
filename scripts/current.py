@@ -26,14 +26,8 @@ while True:
     # print("{:>5}\t{:>5.3f}".format(chan.value, chan.voltage))
     # print("a1 = ", a1.value, a1.voltage)
 
-    GAIN = 1
-    state=False
-
-    # Read all the ADC channel values in a list.
-    values = [0]*50
-    for i in range(50):
-        #values[i] = adc.read_adc(0, gain=GAIN)
-        values[i] = a0-20848
+   
+    values = a0.value - 20848
     
     if max(values)>0:
         print("Device is True")
