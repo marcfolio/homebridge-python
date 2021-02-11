@@ -41,25 +41,7 @@ maxnum = 20864
 #         state=False
 
 #     # return state
-values = [0]*100
-while True:
-    # print("{:>5}\t{:>5.3f}".format(chan.value, chan.voltage))
-    # print("a1 = ", a1.value, a1.voltage)
-
-   
-    for i in range(50):
-    	values[i] = a0.value-maxnum
-    
-    if max(values)>0:
-        print("Device is True")
-		print(max(values))
-		state=True
-    else:
-        print("Device is False")
-		print(max(values))
-		state=False
-
-    # return state
+ 
 
 #     # # Read all the ADC channel values in a list.
 #     # values = a0.value - 20848
@@ -73,10 +55,13 @@ while True:
 #     time.sleep(1)
 
 
-    # for i in range(100):
-    #     #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
-    #     values[i] = a0.value
+
+values = [0]*100
+while True:
+    for i in range(100):
+        #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
+        values[i] = a0.value
                     
-    # print("OFF")
-    # #print(math.ceil(sum(values) / len(values)))
-    # print(max(values))  
+    print("OFF")
+    #print(math.ceil(sum(values) / len(values)))
+    print(max(values))  
