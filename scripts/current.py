@@ -92,6 +92,7 @@ while True:
     else:
     	print("exterior light is on", max(a0values), a0.voltage)
     	
+    	
 
     # print("a1 = ", a1.value, a1.voltage)
                     
