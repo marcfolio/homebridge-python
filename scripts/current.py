@@ -56,12 +56,19 @@ maxnum = 20864
 
 
 
-values = [0]*100
+values = [0]*50
 while True:
-    for i in range(100):
+    for i in range(50):
         #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
-        values[i] = a0.value
+        values[i] = a0.value - maxnum
+
+    if max(values)>0:
+    	print("Divice is true")
+    	print(max(values))
+    else:
+    	print("Divice is false")
+    	print(max(values))
                     
-    print("OFF")
-    #print(math.ceil(sum(values) / len(values)))
-    print(max(values))  
+    # print("OFF")
+    # #print(math.ceil(sum(values) / len(values)))
+    # print(max(values))  
