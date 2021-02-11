@@ -56,11 +56,26 @@ maxnum = 20864
 
 
 
+# values = [0]*100
+# while True:
+#     for i in range(100):
+#         #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
+#         values[i] = a0.value - 20848
+
+#     # print(max(values))
+
+#     if max(values)>0:
+#     	print("Divice is true")
+#     	print(max(values))
+#     else:
+#     	print("Divice is false")
+#     	print(max(values))
+
 values = [0]*100
 while True:
     for i in range(100):
         #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
-        values[i] = a0.value - 20848
+        values[i] = a1.value - 20848
 
     # print(max(values))
 
