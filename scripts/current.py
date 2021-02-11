@@ -62,7 +62,7 @@ while True:
         #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
         values[i] = a0.voltage - 2.6060795312356944
 
-    print(max(values))
+    # print(max(values))
 
     if max(values)<=0:
     	print("Divice is true")
