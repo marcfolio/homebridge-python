@@ -81,13 +81,13 @@ while True:
 
     # print(max(values))
 
-    if max(a1values)>0:
+    if max(a1values)>=0:
     	print("interior light is off", max(a1values))
     else:
     	print("interior light is on", max(a1values))
 
 
-    if max(a0values)>0:
+    if max(a0values)>=0:
     	print("exterior light is off", max(a0values))
     else:
     	print("exterior light is on", max(a0values))
