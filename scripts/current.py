@@ -71,20 +71,29 @@ maxnum = 20864
 #     	print("Divice is false")
 #     	print(max(values))
 
-values = [0]*100
+a0values = [0]*100
+a1values = [0]*100
 while True:
     for i in range(100):
         #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
-        values[i] = a1.value -20848
+        a0values[i] = a0.value - 20848
+        a1values[i] = a1.value -20848
 
     # print(max(values))
 
-    if max(values)>0:
-    	print("Divice is false")
-    	print(max(values))
+    if max(a1values)>0:
+    	print("interior light is off", max(a1values))
     else:
-    	print("Divice is true")
-    	print(max(values))
+    	print("interior light is on", max(a1values))
+
+
+    if max(a0values)>0:
+    	print("exterior light is on")
+    	print(max(a0values))
+    else:
+    	print("exterior light is off")
+    	print(max(a0values))
+    	
 
     # print("a1 = ", a1.value, a1.voltage)
                     
