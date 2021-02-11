@@ -64,7 +64,7 @@ while True:
 
     # print(max(values))
 
-    if max(values)<0:
+    if max(values)>0:
     	print("Divice is true")
     	print(max(values))
     else:
