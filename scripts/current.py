@@ -60,7 +60,7 @@ values = [0]*100
 while True:
     for i in range(100):
         #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
-        values[i] = a0.voltage - 2.6080795922727136
+        values[i] = a0.voltage - 2.606079531235694
 
     print(max(values))
 
