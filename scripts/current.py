@@ -81,18 +81,28 @@ while True:
 
     # print(max(values))
 
-    if max(a1values)>=0:
-    	print("interior light is off", max(a1values), a1.voltage)
-    else:
-    	print("interior light is on", max(a1values), a1.voltage)
+    # a0 exterior light off && interior light off
+    if max(a0vlaues) >= 16 and max(a0vlaues) <= 0:
+    	print("ext OFF", max(a0values), a0.voltage)
+    elif max(a0vlaues) >= 240 and max(a0vlaues) <= 272:
+    	print("ext OFF", max(a0values), a0.voltage)
+    elif max(a0vlaues) == -64:
+    	print("ext ON", max(a0values), a0.voltage)
+    elif max(a0vlaues) <= 192 and max(a0vlaues) >= 176:
+    	print("ext ON", max(a0values), a0.voltage)
+
+    # if max(a1values)>=0:
+    # 	print("interior light is off", max(a1values), a1.voltage)
+    # else:
+    # 	print("interior light is on", max(a1values), a1.voltage)
 
 
-    if max(a0values)>=0:
-    	print("exterior light is off", max(a0values), a0.voltage)
-    else:
-    	print("exterior light is on", max(a0values), a0.voltage)
+    # if max(a0values)>=0:
+    # 	print("exterior light is off", max(a0values), a0.voltage)
+    # else:
+    # 	print("exterior light is on", max(a0values), a0.voltage)
     	
-    	
+
 
     # print("a1 = ", a1.value, a1.voltage)
                     
