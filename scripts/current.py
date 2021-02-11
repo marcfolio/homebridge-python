@@ -65,6 +65,7 @@ while True:
             values[i] = a0.value-maxnum
         
         if max(values)>0:
+
             print("Device is True")
             print(max(values))
             state=True
@@ -75,7 +76,7 @@ while True:
  
         return state
 
-        
+
     # for i in range(100):
     #     #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
     #     values[i] = a0.value
