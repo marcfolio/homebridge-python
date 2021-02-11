@@ -17,7 +17,7 @@ ads = ADS.ADS1115(i2c)
 a0 = AnalogIn(ads, ADS.P0)
 a1 = AnalogIn(ads, ADS.P1)
 
-maxnum = 20864
+maxnum = 20848
 # Create differential input between channel 0 and 1
 # chan = AnalogIn(ads, ADS.P0, ADS.P1)
 
@@ -62,12 +62,14 @@ while True:
         #values[i] = adc.read_adc(0, gain=GAIN)   print(math.ceil(4.2))
         values[i] = a0.value - maxnum
 
-    if max(values)>=0:
+    if max(values)>0:
     	print("Divice is true")
     	print(max(values))
     else:
     	print("Divice is false")
     	print(max(values))
+
+    print("a1 = ", a1.value, a1.voltage)
                     
     # print("OFF")
     # #print(math.ceil(sum(values) / len(values)))
