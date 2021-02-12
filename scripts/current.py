@@ -16,6 +16,7 @@ print(a0.value, a0.voltage)
 
 
 
+
 # Create differential input between channel 0 and 1
 # chan = AnalogIn(ads, ADS.P0, ADS.P1)
 
