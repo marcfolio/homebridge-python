@@ -38,9 +38,10 @@ while True:
 		elif max(a0values) == 240: 
 			print("ext OFF", max(a0values), a0.voltage)
 		elif max(a0values) == 60:
-
+			print("ext OFF", max(a0values), a0.voltage)
 		elif max(a0values) == 272:
-
+			print("ext OFF", max(a0values), a0.voltage)
+			
 		# INT ON / EXT ON
 		elif max(a0values) <= 192 or max(a0values) >= 176:
 			print("ext ON", max(a0values), a0.voltage)
