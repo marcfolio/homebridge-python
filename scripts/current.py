@@ -82,7 +82,7 @@ while True:
     # print(max(values))
 
     # a0 exterior light off && interior light off
-    if max(a0vlues) >= 16 and max(a0vlues) <= 0:
+    if max(a0values) >= 16 and max(a0values) <= 0:
     	print("ext OFF", max(a0values), a0.voltage)
     elif max(a0values) >= 240 and max(a0values) <= 272:
     	print("ext OFF", max(a0values), a0.voltage)
