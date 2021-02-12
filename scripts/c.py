@@ -16,32 +16,34 @@ a1 = AnalogIn(ads, ADS.P1)
 a0values = [0]*100
 a1values = [0]*100
 while True:
-	print("ext: ", a0.value)
-	# print("int: ", a1.value)
-	# for i in range(100):
-	# 	a0values[i] = a0.value - 20848
-	# 	a1values[i] = a1.value -20848
+	# //print("ext: ", a0.value)
+	# # print("int: ", a1.value)
+	for i in range(100):
+		a0values[i] = a0.value - 20848
+		a1values[i] = a1.value -20848
 
-	# 	# INT OFF / EXT OFF
-	# 	if max(a0values) == 16:
-	# 		print("ext OFF", max(a0values), a0.voltage)
-	# 	elif max(a0values) == 0:
-	# 		print("ext OFF", max(a0values), a0.voltage)
+		print(max(a0values))
 
-	# 	# INT OFF / EXT ON
-	# 	elif max(a0values) == -64:
-	# 		print("ext ON", max(a0values), a0.voltage)
+		# INT OFF / EXT OFF
+		if max(a0values) == 16:
+			print("ext OFF", max(a0values), a0.voltage)
+		elif max(a0values) == 0:
+			print("ext OFF", max(a0values), a0.voltage)
 
-	# 	# INT ON / EXT OFF
-	# 	elif max(a0values) == 240: 
-	# 		print("ext OFF", max(a0values), a0.voltage)
-	# 	elif max(a0values) == 60:
+		# INT OFF / EXT ON
+		elif max(a0values) == -64:
+			print("ext ON", max(a0values), a0.voltage)
 
-	# 	elif max(a0values) == 272:
+		# INT ON / EXT OFF
+		elif max(a0values) == 240: 
+			print("ext OFF", max(a0values), a0.voltage)
+		elif max(a0values) == 60:
 
-	# 	# INT ON / EXT ON
-	# 	elif max(a0values) <= 192 or max(a0values) >= 176:
-	# 		print("ext ON", max(a0values), a0.voltage)
+		elif max(a0values) == 272:
+
+		# INT ON / EXT ON
+		elif max(a0values) <= 192 or max(a0values) >= 176:
+			print("ext ON", max(a0values), a0.voltage)
 
 
 #     # a0 exterior light off && interior light off
