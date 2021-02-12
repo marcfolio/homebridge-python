@@ -18,9 +18,9 @@ a1values = [0]*100
 while True:
 	print("ext: ", a0.value)
 	print("int: ", a1.value)
-    for i in range(100):
-        a0values[i] = a0.value - 20848
-        a1values[i] = a1.value -20848
+	for i in range(100):
+		a0values[i] = a0.value - 20848
+		a1values[i] = a1.value -20848
 
 #     # a0 exterior light off && interior light off
 #     if max(a0values) >= 16 and max(a0values) <= 0:
