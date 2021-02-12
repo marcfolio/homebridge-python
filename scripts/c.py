@@ -22,7 +22,7 @@ while True:
 		a0values[i] = a0.value - 20848
 		a1values[i] = a1.value -20848
 
-		print(max(a0values))
+		# print(max(a0values))
 
 		# INT OFF / EXT OFF
 		if max(a0values) == -16:
