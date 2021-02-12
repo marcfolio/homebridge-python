@@ -12,14 +12,12 @@ ads = ADS.ADS1115(i2c)
 a0 = AnalogIn(ads, ADS.P0)
 a1 = AnalogIn(ads, ADS.P1)
 
-print("ext: ", a0.value)
-print("int: ", a1.value)
-
-
 
 a0values = [0]*100
 a1values = [0]*100
-# while True:
+while True:
+	print("ext: ", a0.value)
+	print("int: ", a1.value)
 #     for i in range(100):
 #         a0values[i] = a0.value - 20848
 #         a1values[i] = a1.value -20848
