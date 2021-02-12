@@ -4,7 +4,7 @@
   "description": "Python Script",
   "keywords": [
     "homebridge-plugin",
-    "light"
+    "lights"
   ],
   "engines": {
     "node": ">=0.12.0",
