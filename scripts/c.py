@@ -17,8 +17,8 @@ print("int: ", a1.value)
 
 
 
-# a0values = [0]*100
-# a1values = [0]*100
+a0values = [0]*100
+a1values = [0]*100
 # while True:
 #     for i in range(100):
 #         a0values[i] = a0.value - 20848
