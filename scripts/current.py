@@ -91,6 +91,15 @@ while True:
     elif max(a0vlues) <= 192 and max(a0values) >= 176:
     	print("ext ON", max(a0values), a0.voltage)
 
+	# if max(a1values) >= 16 and max(a1values) <= 0:
+ #    	print("ext OFF", max(a1values), a1.voltage)
+ #    elif max(a1values) >= 240 and max(a1values) <= 272:
+ #    	print("ext OFF", max(a1values), a1.voltage)
+ #    elif max(a1values) == -64:
+ #    	print("ext ON", max(a1values), a1.voltage)
+ #    elif max(a0vlues) <= 192 and max(a1values) >= 176:
+ #    	print("ext ON", max(a1values), a1.voltage)    	
+
     # if max(a1values)>=0:
     # 	print("interior light is off", max(a1values), a1.voltage)
     # else:
