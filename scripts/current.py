@@ -18,6 +18,7 @@ a0 = AnalogIn(ads, ADS.P0)
 a1 = AnalogIn(ads, ADS.P1)
 
 maxnum = 20864
+
 # Create differential input between channel 0 and 1
 # chan = AnalogIn(ads, ADS.P0, ADS.P1)
 
