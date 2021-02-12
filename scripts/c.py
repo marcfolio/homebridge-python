@@ -22,11 +22,20 @@ while True:
 		a0values[i] = a0.value - 20848
 		a1values[i] = a1.value -20848
 
+		# INT OFF / EXT OFF
 		if max(a0values) >= 16 and max(a0values) <= 0:
 			print("ext OFF", max(a0values), a0.voltage)
+
+		# INT OFF / EXT ON
+		elif max(a0values) == -64:
+			print("ext ON", max(a0values), a0.voltage)
+
+		# INT ON / EXT OFF
 		elif max(a0values) >= 240 and max(a0values) <= 272:
 			print("ext OFF", max(a0values), a0.voltage)
-		elif max(a0values) == -64:
+
+		# INT ON / EXT ON
+		elif max(a0values) <= 192 and max(a0values) >= 176:
 			print("ext ON", max(a0values), a0.voltage)
 
 
