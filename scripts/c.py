@@ -69,13 +69,14 @@ while True:
 		elif max(a1values) ==0:
 			print("int ON", max(a1values), a1.voltage)
 		
-
+	time.sleep(1)
+time.sleep(1)
 
 
 		# INT OFF / EXT OFF
-		print(max(a1values))
+		# print(max(a1values))
 
-	time.sleep(1)
+	
 
 #     # a0 exterior light off && interior light off
 #     if max(a0values) >= 16 and max(a0values) <= 0:
