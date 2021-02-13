@@ -22,42 +22,45 @@ while True:
 		a0values[i] = a0.value - 20848
 		a1values[i] = a1.value -20848
 
-		# print(max(a0values))
+		# # INT OFF / EXT OFF
+		# if max(a0values) == -16:
+		# 	print("ext OFF", max(a0values), a0.voltage)
+		# elif max(a0values) == 0:
+		# 	print("ext OFF", max(a0values), a0.voltage)
+
+		# # INT OFF / EXT ON
+		# elif max(a0values) == -64:
+		# 	print("ext ON", max(a0values), a0.voltage)
+		# elif max(a0values) == -80:
+		# 	print("ext ON", max(a0values), a0.voltage)
+		# elif max(a0values) == -96:
+		# 	print("ext ON", max(a0values), a0.voltage)
+
+		# # INT ON / EXT OFF
+		# elif max(a0values) == 208: 
+		# 	print("ext OFF", max(a0values), a0.voltage)
+		# elif max(a0values) == 224:
+		# 	print("ext OFF", max(a0values), a0.voltage)
+		# elif max(a0values) == 240:
+		# 	print("ext OFF", max(a0values), a0.voltage)
+		# elif max(a0values) == 256:
+		# 	print("ext OFF", max(a0values), a0.voltage)
+
+		# # INT ON / EXT ON
+		# elif max(a0values) == 128:
+		# 	print("ext ON", max(a0values), a0.voltage)
+		# elif max(a0values) == 144:
+		# 	print("ext ON", max(a0values), a0.voltage)
+		# elif max(a0values) == 160:
+		# 	print("ext ON", max(a0values), a0.voltage)
+		# elif max(a0values) == 176:
+		# 	print("ext ON", max(a0values), a0.voltage)
+
 
 		# INT OFF / EXT OFF
-		if max(a0values) == -16:
-			print("ext OFF", max(a0values), a0.voltage)
-		elif max(a0values) == 0:
-			print("ext OFF", max(a0values), a0.voltage)
+		print(max(a1values))
 
-		# INT OFF / EXT ON
-		elif max(a0values) == -64:
-			print("ext ON", max(a0values), a0.voltage)
-		elif max(a0values) == -80:
-			print("ext ON", max(a0values), a0.voltage)
-		elif max(a0values) == -96:
-			print("ext ON", max(a0values), a0.voltage)
-
-		# INT ON / EXT OFF
-		elif max(a0values) == 208: 
-			print("ext OFF", max(a0values), a0.voltage)
-		elif max(a0values) == 224:
-			print("ext OFF", max(a0values), a0.voltage)
-		elif max(a0values) == 240:
-			print("ext OFF", max(a0values), a0.voltage)
-		elif max(a0values) == 256:
-			print("ext OFF", max(a0values), a0.voltage)
-
-		# INT ON / EXT ON
-		elif max(a0values) == 128:
-			print("ext ON", max(a0values), a0.voltage)
-		elif max(a0values) == 144:
-			print("ext ON", max(a0values), a0.voltage)
-		elif max(a0values) == 160:
-			print("ext ON", max(a0values), a0.voltage)
-		elif max(a0values) == 176:
-			print("ext ON", max(a0values), a0.voltage)
-
+	time.sleep(1)
 
 #     # a0 exterior light off && interior light off
 #     if max(a0values) >= 16 and max(a0values) <= 0:
