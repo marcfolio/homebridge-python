@@ -18,7 +18,7 @@ a1values = [0]*100
 # while True:
 # //print("ext: ", a0.value)
 # # print("int: ", a1.value)
-for i in range(10):
+for i in range(50):
 	a0values[i] = a0.value - 20848
 	a1values[i] = a1.value -20848
 
