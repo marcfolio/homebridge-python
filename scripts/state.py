@@ -1,6 +1,8 @@
 import sys
 import RPi.GPIO as GPIO ## Import GPIO library
 
+
+
 gpio_num = int(sys.argv[1])
 gpio_str = sys.argv[1]
 # cmd_str = sys.argv[2]
