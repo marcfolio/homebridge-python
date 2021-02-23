@@ -24,6 +24,7 @@ for i in range(50):
 	a1values[i] = a1.value -20848
 
 	# INT OFF / EXT OFF
+	
 	if max(a0values) == -16:
 		print("ext OFF", max(a0values), a0.voltage)
 	elif max(a0values) == 0:
