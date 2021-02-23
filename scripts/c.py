@@ -15,8 +15,8 @@ a1 = AnalogIn(ads, ADS.P1)
 
 a0values = [0]*100 #exterior
 a1values = [0]*100 #interior
-while True:
-	print("ext: ", a0.value - 20848)
+# while True:
+# 	print("ext: ", a0.value - 20848)
 
 # # print("int: ", a1.value)
 for i in range(50):
