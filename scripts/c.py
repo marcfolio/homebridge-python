@@ -23,65 +23,65 @@ for i in range(50):
 	a0values[i] = a0.value - 20848
 	a1values[i] = a1.value -20848
 
-	print("a0: ", a0values[i], max(a0values))
+	print("a0: ", a0values[i], max(a0values[i]))
 
 	# INT OFF / EXT OFF
 
-	if max(a0values) == -16:
-		print("ext OFF", max(a0values), a0.voltage)
-	elif max(a0values) == 0:
-		print("ext OFF", max(a0values), a0.voltage)
+	if max(a0values[i]) == -16:
+		print("ext OFF", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == 0:
+		print("ext OFF", max(a0values[i]), a0.voltage)
 
 	# INT OFF / EXT ON
-	elif max(a0values) == -64:
-		print("ext ON", max(a0values), a0.voltage)
-	elif max(a0values) == -80:
-		print("ext ON", max(a0values), a0.voltage)
-	elif max(a0values) == -96:
-		print("ext ON", max(a0values), a0.voltage)
-	elif max(a0values) == -112:
-		print("ext ON", max(a0values), a0.voltage)
-	elif max(a0values) == -128:
-		print("ext ON", max(a0values), a0.voltage)
-	elif max(a0values) == -144:
-		print("ext ON", max(a0values), a0.voltage)
-	elif max(a0values) == -160:
-		print("ext ON", max(a0values), a0.voltage)
-	elif max(a0values) == -176:
-		print("ext ON", max(a0values), a0.voltage)
+	elif max(a0values[i]) == -64:
+		print("ext ON", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == -80:
+		print("ext ON", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == -96:
+		print("ext ON", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == -112:
+		print("ext ON", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == -128:
+		print("ext ON", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == -144:
+		print("ext ON", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == -160:
+		print("ext ON", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == -176:
+		print("ext ON", max(a0values[i]), a0.voltage)
 
 	# INT ON / EXT OFF
-	elif max(a0values) == 208: 
-		print("ext OFF", max(a0values), a0.voltage)
-	elif max(a0values) == 224:
-		print("ext OFF", max(a0values), a0.voltage)
-	elif max(a0values) == 240:
-		print("ext OFF", max(a0values), a0.voltage)
-	elif max(a0values) == 256:
-		print("ext OFF", max(a0values), a0.voltage)
+	elif max(a0values[i]) == 208: 
+		print("ext OFF", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == 224:
+		print("ext OFF", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == 240:
+		print("ext OFF", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == 256:
+		print("ext OFF", max(a0values[i]), a0.voltage)
 
 	# INT ON / EXT ON
-	elif max(a0values) == 128:
-		print("ext ON", max(a0values), a0.voltage)
-	elif max(a0values) == 144:
-		print("ext ON", max(a0values), a0.voltage)
-	elif max(a0values) == 160:
-		print("ext ON", max(a0values), a0.voltage)
-	elif max(a0values) == 176:
-		print("ext ON", max(a0values), a0.voltage)
+	elif max(a0values[i]) == 128:
+		print("ext ON", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == 144:
+		print("ext ON", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == 160:
+		print("ext ON", max(a0values[i]), a0.voltage)
+	elif max(a0values[i]) == 176:
+		print("ext ON", max(a0values[i]), a0.voltage)
 
 	
-# 	# INT ON / EXT ON
-# 	if max(a1values) == 0:
-# 		print("int ON", max(a1values), a1.voltage)
-# 	# INT OFF / EXT ON && INT OFF / EXT OFF
-# 	elif max(a1values) ==64:
-# 		print("int OFF", max(a1values), a1.voltage)
-# 	# INT ON / EXT OFF && # INT ON / EXT ON
-# 	elif max(a1values) ==-16:
-# 		print("int ON", max(a1values), a1.voltage)
-# 	elif max(a1values) ==0:
-# 		print("int ON", max(a1values), a1.voltage)
+	# INT ON / EXT ON
+	if max(a1values) == 0:
+		print("int ON", max(a1values), a1.voltage)
+	# INT OFF / EXT ON && INT OFF / EXT OFF
+	elif max(a1values) ==64:
+		print("int OFF", max(a1values), a1.voltage)
+	# INT ON / EXT OFF && # INT ON / EXT ON
+	elif max(a1values) ==-16:
+		print("int ON", max(a1values), a1.voltage)
+	elif max(a1values) ==0:
+		print("int ON", max(a1values), a1.voltage)
 		
 
 
