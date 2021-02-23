@@ -13,8 +13,8 @@ a0 = AnalogIn(ads, ADS.P0)
 a1 = AnalogIn(ads, ADS.P1)
 
 
-a0values = [0]*100 #exterior
-a1values = [0]*100 #interior
+a0values = [0]*50 #exterior
+a1values = [0]*50 #interior
 # while True:
 # 	print("ext: ", a0.value - 20848)
 
@@ -23,8 +23,10 @@ for i in range(50):
 	a0values[i] = a0.value - 20848
 	a1values[i] = a1.value -20848
 
+	print("a0: ", a0values[i], max(a0values))
+
 	# INT OFF / EXT OFF
-	
+
 	if max(a0values) == -16:
 		print("ext OFF", max(a0values), a0.voltage)
 	elif max(a0values) == 0:
