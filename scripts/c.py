@@ -20,8 +20,8 @@ a1values = [0]*100 #interior
 
 # # print("int: ", a1.value)
 for i in range(100):
-	a0values[i] = a0.value - 21024
-	a1values[i] = a1.value - 21024
+	a0values[i] = a0.value - 20672
+	a1values[i] = a1.value - 20672
 
 	print("a0: ", a0values[i], max(a0values))
 	# print("a1: ", a1values[i], max(a1values))
