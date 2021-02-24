@@ -13,8 +13,8 @@ a0 = AnalogIn(ads, ADS.P0)
 a1 = AnalogIn(ads, ADS.P1)
 
 
-a0values = [0]*50 #exterior
-a1values = [0]*50 #interior
+a0values = [0]*100 #exterior
+a1values = [0]*100 #interior
 # while True:
 # 	print("ext: ", a0.value - 20848)
 
