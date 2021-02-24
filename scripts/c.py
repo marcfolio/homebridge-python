@@ -27,13 +27,17 @@ for i in range(100):
 	a1values[i] = a1.value - 20672
 
 print("a0: ", max(a0values))
+print("a1: ", max(a1values))
+
+# # INT OFF / EXT OFF
+# if max(a0values) == 160:
+# 	print("ext OFF", max(a0values), a0.voltage)
+# elif max(a0values) == 176:
+# 	print("ext OFF", max(a0values), a0.voltage)
+
 	# # print("a1: ", a1values[i], max(a1values))
 
-	# # INT OFF / EXT OFF
-	# if max(a0values) == 160:
-	# 	print("ext OFF", max(a0values), a0.voltage)
-	# elif max(a0values) == 176:
-	# 	print("ext OFF", max(a0values), a0.voltage)
+	
 
 	# # INT OFF / EXT ON
 	# elif max(a0values) == 96:
