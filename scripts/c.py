@@ -16,8 +16,8 @@ a1 = AnalogIn(ads, ADS.P1)
 a0values = [0]*100 #exterior
 a1values = [0]*100 #interior
 
-a0_state
-a1_state
+a0_state = False
+a1_state = False
 # while True:
 # 	print("ext: ", a0.value - 20848)
 
