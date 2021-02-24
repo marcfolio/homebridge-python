@@ -53,3 +53,5 @@ elif max(a1values) == 240:
 # EXT ON / INT ON && EXT OFF / INT ON
 elif max(a1values) == 176:
 	a1_state = True
+
+print("int: ", a0_state)
