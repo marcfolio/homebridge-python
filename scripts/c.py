@@ -32,7 +32,17 @@ print("a1: ", max(a1values))
 # EXT OFF / INT OFF
 if max(a0values) >=176 and max(a0values) <= 192:
 	a0_state = False
-	print("ext: ", a0_state)
+# EXT ON / INT OFF	
+elif max(a0values) == 112:
+	a0_state = True
+# EXT ON / INT ON	
+elif max(a0values) == 352:
+	a0_state = True
+# EXT OFF / INT ON	
+elif max(a0values) >= 416 and  max(a0values) <= 432:
+	a0_state = False
+
+print("ext: ", a0_state)
 
 # # INT OFF / EXT OFF
 # if max(a0values) == 160:
