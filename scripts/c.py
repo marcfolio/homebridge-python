@@ -71,17 +71,17 @@ for i in range(50):
 		print("ext ON", max(a0values), a0.voltage)
 
 	
-# 	# INT ON / EXT ON
-# 	if max(a1values) == 0:
-# 		print("int ON", max(a1values), a1.voltage)
-# 	# INT OFF / EXT ON && INT OFF / EXT OFF
-# 	elif max(a1values) ==64:
-# 		print("int OFF", max(a1values), a1.voltage)
-# 	# INT ON / EXT OFF && # INT ON / EXT ON
-# 	elif max(a1values) ==-16:
-# 		print("int ON", max(a1values), a1.voltage)
-# 	elif max(a1values) ==0:
-# 		print("int ON", max(a1values), a1.voltage)
+	# INT ON / EXT ON
+	if max(a1values) == 0:
+		print("int ON", max(a1values), a1.voltage)
+	# INT OFF / EXT ON && INT OFF / EXT OFF
+	elif max(a1values) ==64:
+		print("int OFF", max(a1values), a1.voltage)
+	# INT ON / EXT OFF && # INT ON / EXT ON
+	elif max(a1values) ==-16:
+		print("int ON", max(a1values), a1.voltage)
+	elif max(a1values) ==0:
+		print("int ON", max(a1values), a1.voltage)
 		
 
 
