@@ -29,6 +29,11 @@ for i in range(100):
 print("a0: ", max(a0values))
 print("a1: ", max(a1values))
 
+# EXT OFF / INT OFF
+if max(a0values) >=176 and max(a0values) <= 192:
+	a0_state = False
+	print("ext: ", a0_state)
+
 # # INT OFF / EXT OFF
 # if max(a0values) == 160:
 # 	print("ext OFF", max(a0values), a0.voltage)
