@@ -23,7 +23,7 @@ for i in range(50):
 	a0values[i] = a0.value - 20848
 	a1values[i] = a1.value -20848
 
-	print("a0: ", a0values[i], max(a0values[i]))
+	print("a0: ", a0values[i], max(a0values))
 
 	# INT OFF / EXT OFF
 
